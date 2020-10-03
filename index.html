@@ -495,9 +495,18 @@
                 <span> Contact </span>
             </h1>
             <div id="contact-container">
-
+                <script>
+                        function mail(){
+                            
+                            var name = document.getElementById("input-name").value
+                            var msg = document.getElementById("input-message").value
+                            var email = document.getElementById('input-email').value
+                            // replace test@example.com with your email id
+                            window.open(`mailto:averma9838@gmail.com?subject=Message from ${name}&body=${msg}`);
+                        }
+                </script>
                 <div id="contact-form-container">
-                    <form id="contact-form">
+                    <form id="contact-form" onsubmit="return mail();">
                         <input id="input-name" name="name" type="text" placeholder="Your Name">
                         <input id="input-email" name="input-email" type="text" required placeholder="Your Email">
                         <textarea id="input-message" name="input-message" rows="2" cols=40 placeholder="Message"></textarea>
